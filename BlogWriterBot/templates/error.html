@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0074D9, #9F0CFF, #FF4136);
+            /* Replace the color values above with your desired gradient colors */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .error-message {
+            color: #ff4136;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Error</h1>
+    <div class="container">
+        <p class="error-message">{{ message }}</p>
+    </div>
+</body>
+</html>

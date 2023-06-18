@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Writer</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0074D9, #9F0CFF, #FF4136);
+            /* Replace the color values above with your desired gradient colors */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group textarea {
+            width: calc(100% - 20px); /* Subtract 20px for right padding */
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .form-group input[type="text"] {
+            width: calc(100% - 20px); /* Subtract 20px for right padding */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blog Writer</h1>
+    <div class="container">
+        <form method="POST" action="/generate_blog">
+            <div class="form-group">
+                <label for="blog_prompt">Blog Prompt or Question:</label>
+                <textarea id="blog_prompt" name="blog_prompt" placeholder="Enter your blog prompt or question"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="stylistic_preferences">Stylistic and Linguistic Preferences:</label>
+                <textarea id="stylistic_preferences" name="stylistic_preferences" placeholder="Enter your stylistic and linguistic preferences"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="existing_content">Existing Content:</label>
+                <textarea id="existing_content" name="existing_content" placeholder="Enter existing content or upload a file"></textarea>
+                <label class="file-input-label" for="file-input">
+                    <span>Upload File</span>
+                    <input type="file" id="file-input" name="file-input">
+                </label>
+                <div class="file-input-name"></div>
+            </div>
+            <div class="form-group">
+                <label for="output_filename">Output Filename:</label>
+                <input type="text" id="output_filename" name="output_filename" placeholder="Enter the desired output filename">
+            </div>
+            <button class="submit-btn" type="submit">Generate Blog</button>
+        </form>
+    </div>
+</body>
+</html>
